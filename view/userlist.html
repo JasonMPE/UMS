@@ -1,0 +1,56 @@
+<div class="col-sm-12">
+	<label>Search user: <input type="text" ng-model="searchUser"> </label>
+	<a href="#/newUser">
+		<button class="btn btn-success btn-new">
+			<span class="glyphicon glyphicon-user"></span>  Creat New User
+		</button>
+	</a>
+	<hr>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td><a href="" ng-click="order('id')">#</a></td>
+				<td><a href="" ng-click="order('numb')">ID</a></td>
+				<td><a href="" ng-click="order('fName')">First Name</a></td>
+				<td><a href="" ng-click="order('lName')">Last Name</a></td>
+				<td><a href="" ng-click="order('sex')">Sex</a></td>
+				<td><a href="" ng-click="order('age')">Age</a></td>
+				<td><a href="" ng-click="order('title')">Title</a></td>
+				<td>Edit User</td>
+				<td>Delete User</td>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr dir-paginate = "user in users | orderBy: predicate: reverse | filter:searchUser | itemsPerPage: pageSize" current-page="currentPage">
+				<td>{{user.id}}</td>
+				<td>{{user.numb}}</td>
+				<td>{{user.fName}}</td>
+				<td>{{user.lName}}</td>
+				<td>{{user.sex}}</td>
+				<td>{{user.age}}</td>
+				<td>{{user.title}}</td>
+				<td>
+					<a href="#/editUser/{{user.id}}">
+						<button class="btn">
+							<span class="glyphicon glyphicon-pencil"></span>  Edit
+						</button>
+					</a>
+				</td>
+				<td>
+					<button class="btn btn-danger" ng-click="deleteUser(user.id)">
+						<span class="glyphicon glyphicon-trash"></span>  Delete
+					</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="col-sm-offset-4">
+		<dir-pagination-controls max-size="maxSize", boundary-links="true">
+	    </dir-pagination-controls>
+	</div>
+
+	<hr>
+	
+</div>
