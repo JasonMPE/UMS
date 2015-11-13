@@ -1,0 +1,66 @@
+/*########################################
+   header
+######################################## */
+.container-fluid header{
+	background-color:#0083ff;
+	height:100px;
+	text-align: center;
+	line-height: 100px;
+}
+header h2{
+	color:#fff;
+	display:inline-block;
+}
+
+/*########################################
+    sidebar
+######################################## */
+.sidebar{
+	margin-top:50px;
+}
+
+.well a{
+	text-decoration: none;
+	line-height: 2em;
+}
+
+/*########################################
+   main
+######################################## */
+.main{
+	margin-top:50px;
+	margin-bottom: 80px;
+}
+
+tr td{
+	text-align: center;
+}
+
+.btn-save{
+	margin-left: 30%;
+}
+.btn-cancel{
+	margin-left:9%;
+}
+.btn-add{
+	margin-left: 30%;
+}
+.btn-back{
+	margin-left:13%;
+}
+.newUser h3{
+	margin-left:10%;
+	color: #009900;
+}
+.editUser h3{
+	margin-left:15%;
+	color: #009900;
+}
+.form-horizontal{
+	margin-left:30%;
+}
+
+.btn-new{
+	float:right;
+	margin-right:3%;
+}
